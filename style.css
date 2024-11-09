@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #224444;
+    color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .content h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero .content p {
+    color: white;
+    font-size: 1.5rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Tombol CTA */
+.cta {
+    background-color: #4CAF50;
+    color: rgb(238, 234, 234);
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+.cta.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.about, .projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-item {
+    background-color: rgb(50, 51, 59);
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+

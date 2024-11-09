@@ -1,0 +1,190 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.hero {
+    background-color: #4CAF50;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero .hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero .cta {
+    background-color: #fff;
+    color: #4CAF50;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.about, .projects, .contact {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 60px; /* Untuk memberi jarak dari header */
+}
+
+.projects {
+    background-color: #f4f4f4;
+}
+
+.project-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animasi teks */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta {
+        font-size: 1rem;
+    }
+}
+
+button{
+    color: #333;
+}
+
+/* Tombol WhatsApp */
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    width: fit-content;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Tombol TikTok */
+.tiktok-button {
+    display: flex;
+    align-items: center;
+    background-color: #000; /* Warna latar belakang hitam */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    width: fit-content;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.tiktok-button:hover {
+    background-color: #69c9d0; /* Warna ketika tombol di-hover */
+}
+
+.tiktok-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
